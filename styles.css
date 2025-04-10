@@ -1,0 +1,195 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Menu Section (Menu di sebelah kanan) */
+header {
+    display: flex;
+    justify-content: flex-end; /* Menu berada di sebelah kanan */
+    background-color: #4CAF50;
+    padding: 10px 0;
+}
+
+header .menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Bio Section - Menampilkan gambar di sebelah kanan */
+.bio {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.bio-row {
+    display: flex;
+    justify-content: space-between; /* Menyusun teks kiri dan gambar kanan */
+    align-items: center; /* Vertikal centering */
+    gap: 20px; /* Jarak antar kolom */
+}
+
+.bio-text {
+    flex: 1;
+    text-align: left;
+}
+
+.bio-text h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.bio-text p {
+    font-size: 18px;
+    color: #777;
+}
+
+.bio-text button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bio-text button:hover {
+    background-color: #45a049;
+}
+
+.bio-image {
+    flex: 1;
+    text-align: center;
+}
+
+.bio-image img {
+    max-width: 100%;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+}
+
+/* Biodata Section */
+.biodata {
+    text-align: center;
+    background-color: #e0f7fa;
+    padding: 40px 20px;
+}
+
+.biodata h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bio-box {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bio-box:hover {
+    background-color: #e0f7fa;
+}
+
+/* Portfolio Section */
+.portfolio {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menjaga agar konten berada di tengah secara vertikal */
+    align-items: center; /* Menjaga agar konten berada di tengah secara horizontal */
+}
+
+.portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ganti menjadi 3 kolom */
+    gap: 20px;
+    justify-items: center; /* Menjaga setiap item di grid berada di tengah */
+    width: 100%;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    padding: 0; /* Menghilangkan padding untuk menghilangkan ruang kosong */
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Menjaga elemen dalam item teratur secara vertikal */
+    justify-content: center; /* Menjaga isi item tetap terpusat secara vertikal */
+    align-items: center; /* Menjaga isi item tetap terpusat secara horizontal */
+}
+
+/* Video dalam portfolio-item */
+.portfolio-item video {
+    width: 100%; /* Membuat video memenuhi lebar container */
+    height: 100%; /* Membuat video memenuhi tinggi container */
+    object-fit: cover; /* Agar video tetap mengisi area dengan proporsi yang tepat */
+    display: block; /* Menghilangkan margin kosong di bawah video */
+}
+
+/* Judul dan deskripsi dalam item portfolio */
+.portfolio-item h3,
+.portfolio-item p {
+    text-align: center;
+    margin-top: 10px; /* Memberikan jarak antara video dan teks */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bio-row {
+        flex-direction: column; /* Menjadikan gambar dan teks di atas-bawah */
+        text-align: center;
+    }
+
+    .biodata-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .biodata-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header .menu a {
+        font-size: 16px;
+    }
+
+    .bio-text h1 {

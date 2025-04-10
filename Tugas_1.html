@@ -4,84 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contoh Halaman HTML</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Section 1: Menu -->
-    <table border="1" width="100%">
-        <tr>
-            <td align="center"><a href="#section2">Header</a></td>
-            <td align="center"><a href="#section3">Biodata</a></td>
-            <td align="center"><a href="#section4">Portfolio</a></td>
-        </tr>
-    </table>
+    <header>
+        <div class="menu">
+            <a href="#section2">Header</a>
+            <a href="#section3">Biodata</a>
+            <a href="#section4">Portfolio</a>
+        </div>
+    </header>
 
-    <!-- Section 2: Judul di kiri dan gambar di kanan -->
-    <table border="1" width="100%" id="section2">
-        <tr>
-            <td width="50%" align="left" valign="top">
+    <section id="section2" class="bio">
+        <div class="bio-row">
+            <div class="bio-text">
                 <h1>Selamat Datang di Website Saya</h1>
-                <p>Ini adalah contoh header dengan dua kolom. kolom kiri berisi tesk seperti ini</p>
+                <p>Saya selalu percaya bahwa inovasi lahir dari keberanian untuk mencoba hal baru. Jelajahi lebih dalam tentang saya dan temukan bagaimana saya terus mengembangkan diri dalam berbagai bidang.</p>
                 <button>Pelajari lebih lanjut</button>
-            </td>
-            <td width="50%" align="center" valign="middle">
-                <img src="https://via.placeholder.com/200" alt="Gambar Placeholder">
-            </td>
-        </tr>
-    </table>
+            </div>
 
-    <!-- Section 3: Biodata dengan 6 box -->
-    <table border="1" width="100%" id="section3">
-        <tr>
-            <td colspan="3" align="center">
-                <h2>About me</h2>
-                <p>A brief introduction about myself</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">Full Name</td>
-            <td align="center">Education</td>
-            <td align="center">Pekerjaan</td>
-        </tr>
-        <tr>
-            <td align="center">Contact</td>
-            <td align="center">Hobi</td>
-            <td align="center">Alamat</td>
-        </tr>
-    </table>
+            <div class="bio-image">
+                <img src="Media/IMG_20201122_101301_785.jpg" alt="Gambar Saya">
+            </div>
+        </div>
+    </section>
 
-    <!-- Section 4: Portfolio -->
-    <table border="1" width="100%" id="section4">
-        <tr>
-            <td colspan="2" align="center">
-                <h2>Portfolio</h2>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" valign="top">
-                <img src="https://via.placeholder.com/200" alt="Gambar Placeholder">
+    <section id="section3" class="biodata">
+        <h2>About Me</h2>
+        <p>A brief introduction about myself</p>
+        <div class="biodata-grid">
+            <div class="bio-box">
+                <strong>Full Name</strong>
+                <p>Daffa Rizki Ariyanto</p>
+            </div>
+            <div class="bio-box">
+                <strong>Education</strong>
+                <p>S1 Computer Science</p>
+            </div>
+            <div class="bio-box">
+                <strong>Job</strong>
+                <p>Supervisor</p>
+            </div>
+            <div class="bio-box">
+                <strong>Contact</strong>
+                <p>dafarizki209@gmail.com</p>
+            </div>
+            <div class="bio-box">
+                <strong>Hobbies</strong>
+                <p>Coding, Gaming, Traveling</p>
+            </div>
+            <div class="bio-box">
+                <strong>Address</strong>
+                <p>JL. Cililitan Besar, Kramat Jati, Jakarta Timur</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <video autoplay loop muted>
+                    <source src="Media/70d19e6b457d1469a6a2386c2ca686f0.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h3>Proyek 1</h3>
                 <p>Deskripsi proyek 1.</p>
-            </td>
-            <td align="center" valign="top">
-                <img src="https://via.placeholder.com/200" alt="Gambar Placeholder">
+            </div>
+            <div class="portfolio-item">
+                <video autoplay loop muted>
+                    <source src="Media/928aca8b8e476ade2d17a603c7e62015.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h3>Proyek 2</h3>
                 <p>Deskripsi proyek 2.</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" valign="top">
-                <img src="https://via.placeholder.com/200" alt="Gambar Placeholder">
+            </div>
+            <div class="portfolio-item">
+                <video autoplay loop muted>
+                    <source src="Media/fa15d4541c8fe727325da2877e50a235.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h3>Proyek 3</h3>
                 <p>Deskripsi proyek 3.</p>
-            </td>
-            <td align="center" valign="top">
-                <img src="https://via.placeholder.com/200" alt="Gambar Placeholder">
-                <h3>Proyek 4</h3>
-                <p>Deskripsi proyek 4.</p>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
